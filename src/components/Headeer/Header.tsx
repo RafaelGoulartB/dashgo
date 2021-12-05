@@ -1,6 +1,6 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react';
+import { Avatar, Flex, Text, Input, Icon, HStack, Box } from '@chakra-ui/react';
 import React from 'react';
-import { RiSearchLine } from 'react-icons/ri';
+import { RiNotificationLine, RiSearchLine, RiUserAddLine } from 'react-icons/ri';
 
 const Header: React.FC = () => {
   return (
@@ -38,17 +38,46 @@ const Header: React.FC = () => {
         borderRadius="full"
       >
         <Input
-        color="gray.50"
-      variant="unstyled"
-      placeholder="Buscar na plataforma"
-      px="4"
-      mr="4"
-      placeHolder="Buscar na plataforma"
-      _placeholder={{ color: 'gray.400'}}
+          color="gray.50"
+          variant="unstyled"
+          placeholder="Buscar na plataforma"
+          px="4"
+          mr="4"
+          placeHolder="Buscar na plataforma"
+          _placeholder={{ color: 'gray.400' }}
 
         />
 
         <Icon as={RiSearchLine} fontSize="20" />
+      </Flex>
+
+      <Flex
+        alignItems="center"
+        ml="auto"
+      >
+        <HStack
+          spacing="4"
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.500"
+          borderRightWidth={1}
+          borderColor="gray.700"
+        >
+          <Icon as={RiNotificationLine} fontSize="20" />
+          <Icon as={RiUserAddLine} fontSize="20" />
+        </HStack>
+      </Flex>
+
+      <Flex
+        align="center"
+      >
+        <Box mr="4" textAlign="right">
+          <Text>Rafael</Text>
+          <Text color="gray.300" fontSize="sm">rafael@gmail.com</Text>
+        </Box>
+
+        <Avatar size="md" name="Rafa Goulart" />
       </Flex>
     </Flex>
   );
