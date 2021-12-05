@@ -1,13 +1,13 @@
 import {
   Flex,
   Stack,
-  Input,
   Button,
   FormLabel,
   FormControl
 } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import React from 'react'
+import Input from '../components/Form/Input'
 
 const Home: NextPage = () => {
   const onSubmit = (e: React.FormEvent<any>) => {
@@ -32,37 +32,16 @@ const Home: NextPage = () => {
         onSubmit={onSubmit}
       >
         <Stack spacing="4">
-          <FormControl>
-            <FormLabel htmlFor="email">Email</FormLabel>
-            <Input name="email"
-              type="email"
-              id="email"
-              focusBorderColor="pink.500"
-              bgColor="gray.900"
-              variant="filled"
-              _hover={{
-                bgColor: 'gray.900',
-              }}
-              size="lg"
-            />
-          </FormControl>
-
-
-          <FormControl>
-            <FormLabel htmlFor="password">Senha</FormLabel>
-            <Input
-              name="password"
-              id="password"
-              type="password"
-              focusBorderColor="pink.500"
-              bgColor="gray.900"
-              variant="filled"
-              _hover={{
-                bgColor: 'gray.900',
-              }}
-              size="lg"
-            />
-          </FormControl>
+          <Input
+            name="email"
+            label="Email"
+            type="email"
+          />
+          <Input
+            name="password"
+            label="Senha"
+            type="password"
+          />
         </Stack>
 
         <Button type="submit" mt="6" colorScheme="pink" size="lg">Entrar</Button>
