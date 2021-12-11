@@ -2,6 +2,7 @@ import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Text, Th,
 import React from 'react';
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 import Header from '../../components/Headeer/Header';
+import Pagination from '../../components/Pagination/Pagination';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
 const UsersList: React.FC = () => {
@@ -56,6 +57,8 @@ const UsersList: React.FC = () => {
               </Tr>
             </Tbody>
           </Table>
+
+          <Pagination />
         </Box>
       </Flex>
     </Box>
