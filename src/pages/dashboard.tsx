@@ -1,11 +1,11 @@
 import { Text, Box, Flex, SimpleGrid, theme } from '@chakra-ui/react';
 import React from 'react';
-import Header from '../components/Headeer/Header';
+import Header from '../components/Header/Header';
 import Sidebar from '../components/Sidebar/Sidebar';
 import dynamic from 'next/dynamic'
 
 const Chart = dynamic(() => import('react-apexcharts'), {
-    ssr: false,
+  ssr: false,
 })
 
 const options = {
@@ -79,10 +79,10 @@ const Dashboard: React.FC = () => {
           >
             <Text fontSize="lg" mb="4">Inscritos da semana</Text>
             <Chart
-            type="area"
-            height={160}
-            options={(options as any)}
-            series={series}
+              type="area"
+              height={160}
+              options={(options as any)}
+              series={series}
             />
           </Box>
 
